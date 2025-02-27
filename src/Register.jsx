@@ -5,7 +5,7 @@ function Register() {
   const [user, setUser] = useState({
     username: "",
     email: "",
-    password: "",
+    passwordHash: "",
   });
 
   const handleChange = (e) => {
@@ -19,6 +19,7 @@ function Register() {
       alert("User registered successfully!");
     } catch (error) {
       alert("Error registering user!");
+      console.log(error);
     }
   };
 
@@ -36,7 +37,7 @@ function Register() {
         </div>
         <div className="mb-3">
           <label>Password:</label>
-          <input type="password" name="password" className="form-control" onChange={handleChange} required />
+          <input type="password" name="passwordHash" className="form-control" onChange={handleChange} required />
         </div>
         <button type="submit" className="btn btn-primary">Register</button>
       </form>
