@@ -7,15 +7,16 @@ import Dashboard from "./Dashboard";
 import Home from "./Home";
 import AddPlace from "./AddPlace";
 import Places from "./Places";
+import AddRestaurant from "./AddRestaurant";
+import Restaurants from "./Restaurants";
 
 function App() {
   return (
     <div className="container mt-2">
-      <nav>
+      <nav >
         <Link to="/register" className="btn btn-primary me-2">Register</Link>
         <Link to="/" className="btn btn-success me-2">Login</Link>
         <Link to="/dashboard" className="btn btn-warning">Dashboard</Link>
-
       </nav>
       <Routes>
         <Route path="/" element={<Login />} />
@@ -25,6 +26,8 @@ function App() {
         <Route path="/home" element={<Home/>}/>
         <Route path="/add-place" element={<AddPlace />} />
         <Route path="/places" element={<Places />} />
+        <Route path ="/add-restaurant" element={<AddRestaurant/>}/>
+        <Route path ="/restaurants" element={<Restaurants/>}/>
       </Routes>
     </div>
   );

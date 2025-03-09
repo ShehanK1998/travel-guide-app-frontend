@@ -1,5 +1,6 @@
 import { useState } from "react";
 import axios from "axios";
+import { useNavigate } from "react-router-dom";
 
 const AddPlace = () => {
   const [place, setPlace] = useState({
@@ -24,6 +25,7 @@ const AddPlace = () => {
       alert("Failed to add place.");
     }
   };
+  const navigate = useNavigate();
 
   return (
 <div className="container mt-5">
@@ -76,6 +78,14 @@ const AddPlace = () => {
       Add Place
     </button>
   </form>
+  <div>
+    <button
+        className="btn btn-primary btn-lg m-2"
+          onClick={() => navigate("/places")}
+        >
+        View Places
+    </button>
+  </div>
 </div>
   );
 };

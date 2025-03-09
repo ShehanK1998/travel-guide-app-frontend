@@ -1,7 +1,7 @@
 import { useNavigate } from "react-router-dom";
 
 const Dashboard = () => {
-  const navigate = useNavigate(); // Hook for navigation
+  const navigate = useNavigate(); 
 
   return (
     <div className="container mt-5">
@@ -14,10 +14,16 @@ const Dashboard = () => {
           Users
         </button>
         <button
-          className="btn btn-primary btn-lg"
+          className="btn btn-primary btn-lg m-2"
           onClick={() => navigate("/add-place")}
         >
           Places
+        </button>
+        <button
+          className="btn btn-primary btn-lg m-2"
+          onClick={() => navigate("/add-restaurant")}
+        >
+          Restaurant
         </button>
       </div>
     </div>
